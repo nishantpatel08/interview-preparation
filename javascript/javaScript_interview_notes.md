@@ -1,4 +1,47 @@
-## 1. Variables
+# JavaScript Interview Questions
+
+## Table of Contents
+
+- [1. Core JavaScript Concepts](#1-core-javascript-concepts)
+  - [1.1 Variables](#11-variables)
+  - [1.2 Data Types](#12-data-types)
+  - [1.3 Scope](#13-scope)
+  - [1.4 Hoisting](#14-hoisting)
+  - [1.5 Type Coercion](#15-type-coercion)
+  - [1.6 Equality](#16-equality)
+  - [1.7 Operators](#17-operators)
+- [2. Functions and Scope](#2-functions-and-scope)
+  - [2.1 Arrow Functions](#21-arrow-functions)
+  - [2.2 Callbacks](#22-callbacks)
+  - [2.3 Lexical Scope](#23-lexical-scope)
+  - [2.4 Closures](#24-closures)
+  - [2.5 Higher-Order Functions](#25-higher-order-functions)
+  - [2.6 this Keyword](#26-this-keyword)
+- [3. Objects and Data Handling](#3-objects-and-data-handling)
+  - [3.1 Destructuring](#31-destructuring)
+  - [3.2 Spread and Rest Operators](#32-spread-and-rest-operators)
+  - [3.3 Prototypes](#33-prototypes)
+  - [3.4 Classes](#34-classes)
+  - [3.5 Array Methods](#35-array-methods)
+  - [3.6 Immutability](#36-immutability)
+- [4. Asynchronous JavaScript](#4-asynchronous-javascript)
+  - [4.1 Event Loop](#41-event-loop)
+  - [4.2 Promises](#42-promises)
+  - [4.3 Async/Await](#43-asyncawait)
+  - [4.4 Microtasks](#44-microtasks)
+  - [4.5 Timers](#45-timers)
+  - [4.6 Error Handling](#46-error-handling)
+- [5. JavaScript Runtime and Architecture](#5-javascript-runtime-and-architecture)
+  - [5.1 Execution Context](#51-execution-context)
+  - [5.2 Call Stack](#52-call-stack)
+  - [5.3 Memory Management](#53-memory-management)
+  - [5.4 Garbage Collection](#54-garbage-collection)
+  - [5.5 Event Delegation](#55-event-delegation)
+  - [5.6 Modules](#56-modules)
+
+## 1. Core JavaScript Concepts
+
+### 1.1 Variables
 
 **Q. What are variables in JavaScript?**
 
@@ -7,7 +50,7 @@ Variables are used to store data. JavaScript provides three ways to declare vari
 - let: Block-scoped and can be reassigned but not redeclared in the same scope.
 - const: Block-scoped and cannot be reassigned after initialization.
 
-## 2. Data Types
+### 1.2 Data Types
 
 **Q. What are the data types in JavaScript?**
 
@@ -16,7 +59,7 @@ JavaScript has two categories of data types:
 - Non-primitive: Objects, including arrays and functions.
 Primitive values hold individual values, while objects can represent collections of properties and values.
 
-## 3. Scope
+### 1.3 Scope
 
 **Q. What is scope in JavaScript?**
 
@@ -27,7 +70,7 @@ There are three main types:
 - Function scope: Accessible within the function where it is declared.
 - Block scope: Accessible within a block {} when declared using let or const.
 
-## 4. Hoisting
+### 1.4 Hoisting
 
 **Q. What is hoisting in JavaScript?**
 
@@ -36,7 +79,7 @@ Hoisting is JavaScript's behavior of processing declarations before executing th
 - let and const are hoisted but cannot be accessed before initialization because they are in the Temporal Dead Zone (TDZ).
 - Function declarations can generally be called before their definition.
 
-## 5. Type Coercion
+### 1.5 Type Coercion
 
 **Q. What is type coercion in JavaScript?**
 
@@ -46,7 +89,7 @@ There are two types:
 - Implicit coercion: JavaScript converts the type automatically.
 - Explicit coercion: The developer converts the type manually using methods such as Number(), String(), or Boolean().
 
-## 6. Equality
+### 1.6 Equality
 
 **Q. What is the difference between == and ===?**
 
@@ -54,7 +97,7 @@ There are two types:
 - === compares both value and type without type coercion.
 In general, === is preferred because it avoids unexpected type conversions.
 
-## 7. Operators
+### 1.7 Operators
 
 **Q. What are operators in JavaScript?**
 
@@ -70,9 +113,9 @@ Common types include:
 - Optional chaining: ?.
 These operators are used to calculate values, compare data, assign values, and control how expressions are evaluated.
 
----
+## 2. Functions and Scope
 
-## 1. Arrow Functions
+### 2.1 Arrow Functions
 
 **Q. What are arrow functions in JavaScript?**
 
@@ -81,7 +124,7 @@ Arrow functions provide a shorter syntax for writing functions. They do not have
 const add = (a, b) => a + b;
 ```
 
-## 2. Callbacks
+### 2.2 Callbacks
 
 **Q. What is a callback function in JavaScript?**
 
@@ -98,7 +141,7 @@ greet(() => console.log("Hello"));
 
 Callbacks are commonly used in event handling, asynchronous operations, and array methods.
 
-## 3. Lexical Scope
+### 2.3 Lexical Scope
 
 **Q. What is lexical scope in JavaScript?**
 
@@ -115,7 +158,7 @@ function greet() {
 
 Here, greet() can access name because it is defined in the outer scope.
 
-## 4. Closures
+### 2.4 Closures
 
 **Q. What is a closure in JavaScript?**
 
@@ -139,7 +182,7 @@ console.log(counter()); // 2
 
 Closures are commonly used for data privacy, maintaining state, and creating function factories.
 
-## 5. Higher-Order Functions
+### 2.5 Higher-Order Functions
 
 **Q. What is a higher-order function in JavaScript?**
 
@@ -156,7 +199,7 @@ console.log(calculate(5, 3, (a, b) => a + b)); // 8
 
 Common examples include map(), filter(), and reduce().
 
-## 6. this Keyword
+### 2.6 this Keyword
 
 **Q. What is this in JavaScript?**
 
@@ -176,9 +219,9 @@ user.greet(); // John
 
 Here, this refers to the user object because the method is called using user.greet().
 
----
+## 3. Objects and Data Handling
 
-## 1. Destructuring
+### 3.1 Destructuring
 
 **Q. What is destructuring in JavaScript?**
 
@@ -193,7 +236,7 @@ const numbers = [10, 20];
 const [a, b] = numbers;
 ```
 
-## 2. Spread and Rest Operators
+### 3.2 Spread and Rest Operators
 
 **Q. What is the spread operator in JavaScript?**
 
@@ -214,7 +257,7 @@ function sum(...numbers) {
 
 Key difference: Spread expands values, while rest collects values. The syntax is the same, but the usage differs.
 
-## 3. Prototypes
+### 3.3 Prototypes
 
 **Q. What are prototypes in JavaScript?**
 
@@ -222,7 +265,7 @@ A prototype is an object from which another object can inherit properties and me
 
 This mechanism is called prototypal inheritance.
 
-## 4. Classes
+### 3.4 Classes
 
 **Q. What are classes in JavaScript?**
 
@@ -241,7 +284,7 @@ class User {
 
 Classes can also use extends to inherit from another class and super() to call the parent constructor.
 
-## 5. Array Methods
+### 3.5 Array Methods
 
 **Q. What are some commonly used array methods in JavaScript?**
 
@@ -258,7 +301,7 @@ Classes can also use extends to inherit from another class and super() to call t
 
 map() returns a new array containing the callback's results, while forEach() executes a callback for each element and returns undefined.
 
-## 6. Immutability
+### 3.6 Immutability
 
 **Q. What is immutability in JavaScript?**
 
@@ -276,15 +319,15 @@ We can use the spread operator, methods such as map() and filter(), and other te
 
 Important: Spread creates only a shallow copy. Nested objects may still be shared between the original and copied structures.
 
----
+## 4. Asynchronous JavaScript
 
-## 1. Event Loop
+### 4.1 Event Loop
 
 **Q. What is the event loop in JavaScript?**
 
 The event loop allows JavaScript to handle asynchronous operations without blocking the main thread. It checks whether the call stack is empty and moves ready callbacks from queues to the call stack for execution.
 
-## 2. Promises
+### 4.2 Promises
 
 **Q. What is a Promise in JavaScript?**
 
@@ -296,7 +339,7 @@ A Promise has three states:
 - Rejected: Operation failed.
 We commonly handle promises using .then(), .catch(), and .finally().
 
-## 3. Async/Await
+### 4.3 Async/Await
 
 **Q. What are async and await in JavaScript?**
 
@@ -305,7 +348,7 @@ async and await provide a cleaner way to work with promises.
 - await pauses execution of the surrounding async function until the Promise settles, without blocking the main thread.
 They make asynchronous code easier to read and maintain.
 
-## 4. Microtasks
+### 4.4 Microtasks
 
 **Q. What are microtasks in JavaScript?**
 
@@ -313,7 +356,7 @@ Microtasks are high-priority queued tasks that run after the current synchronous
 
 Promise callbacks, such as .then() and .catch(), are common examples of microtasks.
 
-## 5. Timers
+### 4.5 Timers
 
 **Q. How do setTimeout() and setInterval() work in JavaScript?**
 
@@ -321,7 +364,7 @@ Promise callbacks, such as .then() and .catch(), are common examples of microtas
 - setInterval() schedules a callback to run repeatedly at a specified interval.
 The callbacks do not execute immediately when the delay expires. They must wait until the call stack is available and the event loop can process them.
 
-## 6. Error Handling
+### 4.6 Error Handling
 
 **Q. How do you handle errors in asynchronous JavaScript?**
 
@@ -331,9 +374,9 @@ Error handling depends on the asynchronous pattern:
 - Synchronous code: Use try...catch where appropriate.
 For async/await, try...catch is especially useful for handling rejected promises and preventing unhandled errors.
 
----
+## 5. JavaScript Runtime and Architecture
 
-## 1. Execution Context
+### 5.1 Execution Context
 
 **Q. What is an execution context in JavaScript?**
 
@@ -344,7 +387,7 @@ The main types are:
 - Function execution context: Created whenever a function is called.
 - Eval execution context: Created when code is executed using eval().
 
-## 2. Call Stack
+### 5.2 Call Stack
 
 **Q. What is the call stack in JavaScript?**
 
@@ -354,7 +397,7 @@ When a function is called, it is pushed onto the stack. When it finishes, it is 
 
 If the stack grows too large, such as through infinite recursion, JavaScript can throw a stack overflow error.
 
-## 3. Memory Management
+### 5.3 Memory Management
 
 **Q. How does memory management work in JavaScript?**
 
@@ -362,7 +405,7 @@ JavaScript automatically allocates memory when values and objects are created an
 
 The JavaScript engine manages this process, so developers generally do not need to allocate or free memory manually.
 
-## 4. Garbage Collection
+### 5.4 Garbage Collection
 
 **Q. What is garbage collection in JavaScript?**
 
@@ -376,7 +419,7 @@ A memory leak occurs when memory that is no longer needed remains reachable, pre
 
 Common causes include unnecessary global variables, uncleared timers, and event listeners that are no longer needed.
 
-## 5. Event Delegation
+### 5.5 Event Delegation
 
 **Q. What is event delegation in JavaScript?**
 
@@ -384,7 +427,7 @@ Event delegation is a technique in which we attach a single event listener to a 
 
 It works through event bubbling and is useful for improving efficiency and handling dynamically added elements.
 
-## 6. Modules
+### 5.6 Modules
 
 **Q. What are modules in JavaScript?**
 
